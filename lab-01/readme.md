@@ -19,7 +19,7 @@ Copy and paste on to each section :
 
 ### Query section
 
-``` json
+``` graphql
 mutation createBaseQuery($repo:String!, $props:[PropertyIdentifierAndScalarValue!],
   $className:String!){
   createCmAbstractPersistable(repositoryIdentifier: $repo, 
@@ -79,7 +79,7 @@ Each response has an ID, allowing us to track it. We can monitor all answers pro
 
 ### Query Section
 
-```json
+```graphql
 mutation createVectorQuery($repo:String!, $props:[PropertyIdentifierAndScalarValue!],
   $className:String!){
   createCmAbstractPersistable(repositoryIdentifier: $repo, 
@@ -136,7 +136,7 @@ mutation createVectorQuery($repo:String!, $props:[PropertyIdentifierAndScalarVal
 
 ### Query Section
 
-```Json
+```graphql
 {
   folder(repositoryIdentifier: "content", identifier: "/Focus Corp/Invoices") {
     containedDocuments {
@@ -163,7 +163,7 @@ mutation createVectorQuery($repo:String!, $props:[PropertyIdentifierAndScalarVal
 ![](README_assets/attachments/screenshot-2025-03-17-at-14-48-17-m8d4eoel.png)
 
 ## (Step 4) Gen AI on specifc document 
-```json
+```graphql
 mutation createDocumentQuery($repo:String!, $props:[PropertyIdentifierAndScalarValue!],
   $className:String!){
   createCmAbstractPersistable(repositoryIdentifier: $repo, 
@@ -218,7 +218,7 @@ mutation createDocumentQuery($repo:String!, $props:[PropertyIdentifierAndScalarV
 ### STEP-4 B: simplified verison 
 
 ### 
-```json
+```graphql
 mutation createDocumentQuery($repo:String!, $props:[PropertyIdentifierAndScalarValue!],
   $className:String!){
   createCmAbstractPersistable(repositoryIdentifier: $repo, 
@@ -268,7 +268,7 @@ mutation createDocumentQuery($repo:String!, $props:[PropertyIdentifierAndScalarV
 
 ### Query Section 
 
-```json
+```graphql
 mutation createMultiDocumentsQuery($repo:String!, $props:[PropertyIdentifierAndScalarValue!],
   $className:String!){
   createCmAbstractPersistable(repositoryIdentifier: $repo, 
@@ -325,7 +325,7 @@ mutation createMultiDocumentsQuery($repo:String!, $props:[PropertyIdentifierAndS
 
 ### Query section
 
-```json
+```graphql
 query baseQuery($repo:String!, $id:String!,
   $className:String!){
   cmAbstractPersistable(repositoryIdentifier: $repo,
