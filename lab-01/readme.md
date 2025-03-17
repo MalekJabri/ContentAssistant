@@ -151,13 +151,8 @@ mutation createVectorQuery($repo:String!, $props:[PropertyIdentifierAndScalarVal
 
 ### Variable Section
 
-```Json
-{
-  "repo":"content",
-  "id": "{95A33060-0000-C111-8CC5-69A699E44F48}",
-  "className": "GenAIInvoiceAmount"
-}
-```
+no content required 
+
 ### Response
 
 ![](README_assets/attachments/screenshot-2025-03-17-at-14-48-17-m8d4eoel.png)
