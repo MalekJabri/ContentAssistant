@@ -7,9 +7,11 @@ tags: []
 
 ## How to use the GraphiQl
 
-GraphiQL is an interactive in-browser tool designed for exploring and testing GraphQL APIs. It provides a user-friendly interface that allows developers to write, edit, and execute GraphQL queries with ease. With features like autocomplete and syntax highlighting, GraphiQL helps streamline the development process by enabling quick experimentation and debugging of API endpoints, making it an invaluable resource for anyone working with GraphQL.
 
-IWeIn our exploration of the GraphiQL interface, we'll utilize three key sections: Query, Variables, and Response. The Query section is where we construct and execute our GraphQL queries, allowing us to retrieve specific data from the API. The Variables section enables us to pass dynamic values to our queries, making them more flexible and reusable. Finally, the Response section displays the results of our queries, offering insights into the data structure and content returned by the server. Together, these components facilitate efficient data retrieval and manipulation.
+GraphiQL is an interactive in-browser tool designed for exploring and testing GraphQL APIs. It provides a user-friendly interface that allows developers to write, edit, and execute GraphQL queries with ease. With features like autocomplete and syntax highlighting, GraphiQL helps streamline the development process by enabling quick experimentation and debugging of API endpoints, making it an invaluable resource for anyone working with Graphql.
+
+In our exploration of the GraphiQL interface, we'll utilize three key sections: Query, Variables, and Response. The Query section is where we construct and execute our GraphQL queries, allowing us to retrieve specific data from the API. The Variables section enables us to pass dynamic values to our queries, making them more flexible and reusable. Finally, the Response section displays the results of our queries, offering insights into the data structure and content returned by the server. Together, these components facilitate efficient data retrieval and manipulation.
+
 
 ![](README_assets/attachments/image-m8d3cal0.png)
 
@@ -157,6 +159,8 @@ no content required
 
 ![](README_assets/attachments/screenshot-2025-03-17-at-14-48-17-m8d4eoel.png)
 
+### Copy one of the ID from the response section for the step 4
+
 ## (Step 4) Gen AI on specifc document 
 ```graphql
 mutation createDocumentQuery($repo:String!, $props:[PropertyIdentifierAndScalarValue!],
@@ -187,7 +191,7 @@ mutation createDocumentQuery($repo:String!, $props:[PropertyIdentifierAndScalarV
 }
 ```
 
-### variable section
+### variable section (Cluster 1)
 
 ```json
 {
@@ -198,7 +202,27 @@ mutation createDocumentQuery($repo:String!, $props:[PropertyIdentifierAndScalarV
     {"GenaiMaxDocumentChunks": 6},
     {"GenaiContextDocument": 
     	{
-        "identifier":"{95A33060-0000-C111-8CC5-69A699E44F48}"
+        "identifier":"{95E68040-0000-C11C-8EDF-E6F4F92616ED}"
+      }
+    }
+  ],
+  "className": "GenaiDocumentQuery"
+}
+```
+
+
+### variable section, Update "identifier" based on the step 3 response.
+
+```json
+{
+  "repo":"content",
+  "props": [
+    {"GenaiLLMPrompt":"What is the total amount in the invoice."},    
+    {"GenaiPerformLLMQuery": true},
+    {"GenaiMaxDocumentChunks": 6},
+    {"GenaiContextDocument": 
+    	{
+        "identifier":"xxxxxxx"
       }
     }
   ],
