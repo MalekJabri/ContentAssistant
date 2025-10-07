@@ -202,7 +202,7 @@ mutation createDocumentQuery($repo:String!, $props:[PropertyIdentifierAndScalarV
     {"GenaiMaxDocumentChunks": 6},
     {"GenaiContextDocument": 
     	{
-        "identifier":"{95E68040-0000-C11C-8EDF-E6F4F92616ED}"
+        "identifier":"{9994FE40-0000-CA28-B8DF-E8A771380369}"
       }
     }
   ],
@@ -268,7 +268,7 @@ mutation createDocumentQuery($repo:String!, $props:[PropertyIdentifierAndScalarV
     {"GenaiMaxDocumentChunks": 6},
     {"GenaiContextDocument": 
     	{
-        "identifier":"{95A33060-0000-C111-8CC5-69A699E44F48}"
+        "identifier":"{9994FE40-0000-CA28-B8DF-E8A771380369}"
       }
     }
   ],
@@ -322,11 +322,11 @@ mutation createMultiDocumentsQuery($repo:String!, $props:[PropertyIdentifierAndS
 {
   "repo":"content",
   "props": [
-    {"GenaiLLMPrompt":"list all the client names in the invoices"},    
+    {"GenaiLLMPrompt":"Client name and total amount per invoices"},    
     {"GenaiPerformLLMQuery": true},
     {"GenaiMaxDocumentChunks": 5},
     {"GenaiContextDocuments": 
-        ["{95A33060-0000-C77D-A3AA-A61203708043}"]    
+        ["{9994FE40-0000-CA28-B8DF-E8A771380369}", "{9994FE40-0000-CC94-BBB8-678E68CE426D}"]    
     }
   ],
   "className": "GenaiMultiDocumentQuery"
@@ -370,7 +370,7 @@ query baseQuery($repo:String!, $id:String!,
 ```json
 {
   "repo":"content",
-  "id": "{95A39D50-0000-C1E0-B02E-9EFB45BF2D81}",
+  "id": "{99BE6390-0000-C1B5-A92C-0D892CB684EB}",
   "className": "GenaiBaseQuery"
 }
 ```
